@@ -29,6 +29,9 @@ class Handler:
 
         #deklaracja okien dialogowych
         self.window = self.builder.get_object("window1")
+        self.opendialog = self.builder.get_object("filechooserdialog1")
+        self.opendialog.set_transient_for(self.window)
+        self.opendialog.set_destroy_with_parent(1)
         self.settingsdialog = self.builder.get_object("settingsdialog")
         self.settingsdialog.set_transient_for(self.window)
         self.settingsdialog.set_destroy_with_parent(1)
